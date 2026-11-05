@@ -1,0 +1,4 @@
+Model,PatchAccuracy,MacroF1,MeanAUC,PatientsCorrect,PatientAccuracy
+"M1 SVM, handcrafted features",92.66,92.08,0.9841,53 / 54,98.1
+"M2 SVM, EfficientNet-b0 features",93.96,93.6,0.9902,54 / 54,100
+"M3 EfficientNet-b0 fine-tuned",99.81,99.79,0.9999,54 / 54,100

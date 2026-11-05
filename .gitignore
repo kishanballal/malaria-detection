@@ -1,0 +1,20 @@
+# Raw data and extracted patches (~10 GB, not versioned)
+dataset/
+patches_full/
+patches_subset/
+stage1_preprocessing/patches_*/
+stage1_preprocessing_full/patches_*/
+
+# Large .mat files (over GitHub's 50/100 MB limits)
+stage2_features_full/features_*.mat
+stage3_models_full/M1_svm_handcrafted.mat
+stage3_models_full/M2_svm_deep.mat
+results/step2/resnet50_trained.mat
+
+# MATLAB / OS clutter
+*.asv
+*.m~
+slprj/
+Thumbs.db
+.DS_Store
+~$*

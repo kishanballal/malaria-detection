@@ -1,0 +1,7 @@
+FeatureSet,Dimensions,Silhouette
+Colour (HSV hist + Lab stats),54,0.048
+GLCM texture,16,-0.037
+HOG,900,-0.032
+LBP,90,0.113
+All handcrafted combined,1060,-0.004
+EfficientNet-b0 deep features,1280,0.069

@@ -1,0 +1,13 @@
+Split,Class,Patients,Photos,Patches,PercentOfPatches
+train,falciparum,105,902,13541,21.3
+train,vivax,105,1538,14116,22.2
+train,uninfected,35,574,16930,26.6
+train,ALL,245,3014,44587,70
+val,falciparum,23,209,3031,4.8
+val,vivax,23,368,2999,4.7
+val,uninfected,8,130,3830,6
+val,ALL,54,707,9860,15.5
+test,falciparum,22,175,2802,4.4
+test,vivax,22,317,3104,4.9
+test,uninfected,7,114,3360,5.3
+test,ALL,51,606,9266,14.5

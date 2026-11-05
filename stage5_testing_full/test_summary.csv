@@ -1,0 +1,4 @@
+Model,PatchAccuracy,CI95,MacroF1,MeanAUC,PatientsCorrect,PatientAccuracy,msPerPatch
+"M1 SVM, handcrafted features",91.46,90.88 - 92.02,91.1,0.9806,51 / 51,100,0.394
+"M2 SVM, EfficientNet-b0 features",91.72,91.14 - 92.27,91.44,0.9834,50 / 51,98,0.51
+"M3 EfficientNet-b0 fine-tuned",99.44,99.26 - 99.57,99.41,0.9998,51 / 51,100,2.559

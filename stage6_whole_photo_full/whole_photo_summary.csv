@@ -1,0 +1,7 @@
+Measure,Value
+Photos,98.0392156862745
+Patients,100
+Parasite recall,95.5121703853955
+Parasite precision,12.3627695904288
+False parasites per uninfected photo,0
+Threshold T (from validation),1

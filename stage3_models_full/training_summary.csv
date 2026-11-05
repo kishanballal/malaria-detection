@@ -1,0 +1,4 @@
+Model,InputFeatures,Trainable,TrainAccuracy,TrainSeconds
+"M1 SVM (RBF), handcrafted features",1060,3 one-vs-one SVMs,97.43,15.4
+"M2 SVM (RBF), EfficientNet-b0 features",1280,3 one-vs-one SVMs,97.75,22
+"M3 EfficientNet-b0 fine-tuned",150528,4.03 million weights,99.98,13315.9

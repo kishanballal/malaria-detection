@@ -1,0 +1,4 @@
+Model,ValAccuracy,TestAccuracy,ValMacroF1,TestMacroF1
+"M1 SVM, handcrafted features",92.66,91.46,92.08,91.1
+"M2 SVM, EfficientNet-b0 features",93.96,91.72,93.6,91.44
+"M3 EfficientNet-b0 fine-tuned",99.81,99.44,99.79,99.41

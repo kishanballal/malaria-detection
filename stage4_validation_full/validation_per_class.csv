@@ -1,0 +1,10 @@
+Model,Class,Patches,Precision,Recall,F1,AUC
+"M1 SVM, handcrafted features",falciparum,3031,89.02,88.29,88.65,0.9725
+"M1 SVM, handcrafted features",uninfected,3830,97.62,99.66,98.63,0.9994
+"M1 SVM, handcrafted features",vivax,2999,89.78,88.13,88.94,0.9804
+"M2 SVM, EfficientNet-b0 features",falciparum,3031,90.08,91.95,91,0.9843
+"M2 SVM, EfficientNet-b0 features",uninfected,3830,98.73,97.57,98.15,0.999
+"M2 SVM, EfficientNet-b0 features",vivax,2999,91.92,91.36,91.64,0.9874
+"M3 EfficientNet-b0 fine-tuned",falciparum,3031,99.57,99.8,99.69,0.9999
+"M3 EfficientNet-b0 fine-tuned",uninfected,3830,100,100,100,1
+"M3 EfficientNet-b0 fine-tuned",vivax,2999,99.8,99.57,99.68,0.9999

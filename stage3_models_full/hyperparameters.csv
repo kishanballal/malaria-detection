@@ -1,0 +1,10 @@
+Setting,Value
+Optimiser,Adam
+Initial learning rate (x0.3 every 10 epochs),0.0001
+Epochs,35
+Mini-batch size,32
+Input size,224 x 224 x 3
+Loss,Cross-entropy
+Augmentation,Random left-right and up-down flips (no rotation)
+Best epoch kept by,Lowest validation loss
+Hardware,GPU: NVIDIA GeForce RTX 5060 Laptop GPU
