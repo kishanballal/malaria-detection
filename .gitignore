@@ -18,3 +18,6 @@ slprj/
 Thumbs.db
 .DS_Store
 ~$*
+
+# Reports (final official report will be added later)
+*.docx

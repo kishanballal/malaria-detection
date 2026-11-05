@@ -36,7 +36,7 @@ Scripts are in `code/`. Run them in order from the project root; each stage writ
 
 Other scripts: `classify_photo.m` (pick a photo, get a diagnosis), `plot_training_curves.m`, `step3_train_full.m` (earlier full-training script, superseded by stage 3).
 
-The full write-up is in `Malaria_Detection_Full_Report.docx` (earlier preprocessing reports are next to it).
+The final report will be added here once it is ready.
 
 ## Known issues
 
