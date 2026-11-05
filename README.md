@@ -20,12 +20,11 @@ All splits are **by patient** (about 70/15/15) to avoid leakage. 63,713 patches 
 
 ## Pipeline and results
 
-Scripts are in `code/`. Run them in order from the project root; each stage writes figures and CSVs to its own `stage*_full` folder (the non-`_full` folders are from the 1,300-patch pilot run).
+Scripts are in `code/`. Run them in order from the project root; each stage writes figures and CSVs to its own `stage*_full` folder.
 
 | Stage | Script | What it does | Result |
 |---|---|---|---|
 | 0 | `step1_extract_patches.m` | Cut 96 px patches around annotated parasites / WBCs, patient split | 63,713 patches |
-| (pilot) | `step2_benchmark.m` | 6 pipelines on 1,300 patches | EfficientNet-b0 95.2% / F1 0.955 best; ResNet-50 tie; handcrafted+RF 84.6%; colour+GLCM SVM 68.1% |
 | 1 | `stage1_preprocessing.m` | Reinhard colour normalisation (reference from 3,000 train patches) | Normalised patch set |
 | 2 | `stage2_feature_extraction.m` | Colour, GLCM, HOG, LBP and deep (EfficientNet) features, silhouette + t-SNE | Silhouette: LBP 0.127, deep 0.083, handcrafted -0.019 |
 | 3 | `stage3_training.m` | M1 SVM on handcrafted, M2 SVM on deep features, M3 fine-tuned EfficientNet-b0 (35 epochs) | Best M3 checkpoint at epoch 12 |
@@ -34,7 +33,9 @@ Scripts are in `code/`. Run them in order from the project root; each stage writ
 | 6 | `stage6_whole_photo.m` | Candidate blob detection on whole photos, then M3 | 98.0% photos, 100% patients, parasite recall 95.5%, **precision 12.4%** (see known issues) |
 | 7 | `stage7_gradcam.m` | Grad-CAM on test patches | 42.5% of heat in the patch centre (chance 19.6%); peak on the parasite in 83% of patches |
 
-Other scripts: `classify_photo.m` (pick a photo, get a diagnosis), `plot_training_curves.m`, `step3_train_full.m` (earlier full-training script, superseded by stage 3).
+Other scripts: `classify_photo.m` (pick a photo, get a diagnosis) and `plot_training_curves.m`.
+
+An earlier pilot on 1,300 patches compared six pipelines; fine-tuned EfficientNet-b0 came out best (95.2%), which is why it is used here.
 
 The final report will be added here once it is ready.
 
@@ -47,10 +48,9 @@ The final report will be added here once it is ready.
 
 Excluded via `.gitignore` (kept only on the training laptop):
 
-- `dataset/` raw photos and annotations (~10 GB) and the extracted patches (`patches_full/`, `patches_subset/`, `stage1_preprocessing*/patches_*`)
+- `dataset/` raw photos and annotations (~10 GB) and the extracted patches (`patches_full/`, `stage1_preprocessing_full/patches_*`)
 - `stage3_models_full/M1_svm_handcrafted.mat` (123 MB) and `M2_svm_deep.mat` (159 MB), over GitHub's 100 MB limit
 - `stage2_features_full/features_*.mat` (650 + 144 + 135 MB)
-- `results/step2/resnet50_trained.mat` (88 MB, pilot model only)
 
 The final model, `stage3_models_full/M3_efficientnetb0_finetuned.mat` (16 MB), is included.
 

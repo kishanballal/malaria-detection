@@ -1,5 +1,0 @@
-Class,Patients,Photos,MinPhotosPerPatient,MeanPhotosPerPatient,MaxPhotosPerPatient,AnnotatedParasites,AnnotatedWBCs
-falciparum,150,1883,4,12.6,22,84509,35449
-vivax,150,3014,15,20.1,30,43101,0
-uninfected,50,1141,11,22.8,33,0,27340
-TOTAL,350,6038,4,17.3,33,127610,62789
